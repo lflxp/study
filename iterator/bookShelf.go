@@ -23,7 +23,7 @@ func (this *BookShelf) GetLength() int {
 	return this.last
 }
 
-func (this *BookShelf) Iterator() *BookShelfIterator {
+func (this *BookShelf) Iterator() Iterator {
 	book := BookShelfIterator{}
 	book.BookShelfIterator(this)
 	return &book
