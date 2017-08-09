@@ -1,7 +1,6 @@
 package iterator
 
 type BookShelfIterator struct {
-	Iterator
 	BookShelf 	*BookShelf
 	Index 		int
 }
@@ -10,7 +9,7 @@ func (this *BookShelfIterator) BookShelfIterator(bookshelf *BookShelf) {
 	this.BookShelf = bookshelf
 	this.Index = 0
 }
-
+//继承Iterator接口
 func (this *BookShelfIterator) HasNext() bool {
 	if this.Index < this.BookShelf.GetLength() {
 		return true
